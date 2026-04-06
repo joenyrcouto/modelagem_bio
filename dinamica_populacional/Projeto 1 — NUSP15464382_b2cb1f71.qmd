@@ -65,8 +65,8 @@ format:
         \setlength{\parindent}{1.2em}
         \setlength{\parskip}{0pt}
 engine: jupyter
-comp_nativa: true
-modo_escrita: false
+comp_nativa: false
+modo_escrita: true
 usar_gerais: true
 usar_exts: true
 usar_prog: true

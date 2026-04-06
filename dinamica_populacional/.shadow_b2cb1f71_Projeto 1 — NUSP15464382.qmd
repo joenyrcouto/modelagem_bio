@@ -1,6 +1,7 @@
 ---
+chave: 6f57be1f
 extensoes: cl-roberts (modificada)
-gerais: abnt-num.csl, ifsc.jpg
+gerais: abnt-num.csl, bib.bib, ifsc.jpg
 lang: pt
 bibliography: bib.bib
 csl: abnt-num.csl
@@ -65,12 +66,6 @@ format:
         \setlength{\parindent}{1.2em}
         \setlength{\parskip}{0pt}
 engine: jupyter
-comp_nativa: true
-modo_escrita: false
-usar_gerais: true
-usar_exts: true
-usar_prog: true
-ignorar_erros: true
 ---
 
 \begin{titlepage}

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>mapa_seno_4d096e94</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="mapa_seno_4d096e94_files/libs/clipboard/clipboard.min.js"></script>
+<script src="mapa_seno_4d096e94_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="mapa_seno_4d096e94_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="mapa_seno_4d096e94_files/libs/quarto-html/popper.min.js"></script>
+<script src="mapa_seno_4d096e94_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="mapa_seno_4d096e94_files/libs/quarto-html/anchor.min.js"></script>
+<link href="mapa_seno_4d096e94_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="mapa_seno_4d096e94_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="mapa_seno_4d096e94_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="mapa_seno_4d096e94_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="mapa_seno_4d096e94_files/libs/bootstrap/bootstrap-00905909dbb728d17badcf1aaca3987a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="introdução" class="level1 unnumbered">
+<h1 class="unnumbered">Introdução</h1>
+<p>A modelagem matemática em biologia frequentemente emprega equações de diferenças para descrever a evolução temporal de populações ou de sistemas dinâmicos, como discutido por Allman e Rhodes (2004) no Capítulo 1 de seu livro <em>Mathematical Models in Biology: An Introduction</em>. Enquanto o modelo Malthusiano linear <span class="math inline">\(P_{t+1} = \lambda P_t\)</span> produz crescimento ou decaimento exponencial, modelos não lineares, como o mapa logístico, revelam comportamentos mais ricos, incluindo bifurcações e caos. Neste projeto, explora-se o mapa seno, definido pela equação de recorrência</p>
+<p><span class="math display">\[\begin{equation}
+\label{eq:sinemap}
+x_{t+1} = A \sin(\pi x_t),
+\end{equation}\]</span></p>
+<p>onde <span class="math inline">\(x_t \in [0,1]\)</span> e o parâmetro de controle <span class="math inline">\(A \in (0,1]\)</span>. Este mapa, embora simples, exibe uma dinâmica complexa análoga à do mapa logístico, sendo utilizado para ilustrar conceitos fundamentais da teoria de sistemas dinâmicos.<br>
+</p>
+<p>Para analisar o mapa seno, emprega-se três ferramentas computacionais que seguem a metodologia. A primeira é o diagrama de bifurcação, que consiste em variar o parâmetro <span class="math inline">\(A\)</span> e, para cada valor, descartar um número suficiente de iterações iniciais (transiente) e então plotar os valores subsequentes de <span class="math inline">\(x_t\)</span> em função de <span class="math inline">\(A\)</span>. Esse gráfico revela como o comportamento de longo prazo do sistema muda com <span class="math inline">\(A\)</span>: regiões de ponto fixo, ciclos de período <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(8\)</span>, e regimes caóticos, além de janelas de periodicidade dentro do caos. A análise de bifurcações é essencial para compreender a transição da ordem ao caos em modelos não lineares discretos.</p>
+<p>A segunda ferramenta é o expoente de Lyapunov, que quantifica a sensibilidade do sistema às condições iniciais. Para o mapa seno, a derivada da função é <span class="math inline">\(f'(x) = A\pi\cdot\cos(\pi x)\)</span>. O expoente é estimado numericamente por</p>
+<p><span class="math display">\[\begin{equation}
+\label{eq:lyapunov}
+\lambda \approx \frac{1}{N}\sum_{i=1}^{N} \ln |f'(x_i)|,
+\end{equation}\]</span></p>
+<p>onde os <span class="math inline">\(x_i\)</span> são pontos de uma órbita após o transiente. Valores de <span class="math inline">\(\lambda\)</span> negativos indica-se estabilidade periódica, <span class="math inline">\(\lambda \approx 0\)</span> ocorre nos pontos de bifurcação, e <span class="math inline">\(\lambda &gt; 0\)</span> caracteriza caos. Allman e Rhodes (2004) destacam que o expoente de Lyapunov é uma medida direta da imprevisibilidade em sistemas caóticos, sendo calculado por meio da linearização da dinâmica.</p>
+<p>A terceira etapa consiste em investigar a distribuição da variável <span class="math inline">\(x_t\)</span> no regime caótico, escolhe-se um valor de <span class="math inline">\(A\)</span> com <span class="math inline">\(\lambda &gt; 0\)</span> (por exemplo, <span class="math inline">\(A = 0,98\)</span>). Gerando uma série temporal longa (como <span class="math inline">\(10^6\)</span> iterações) e construindo um histograma, obtem-se uma estimativa da densidade de probabilidade invariante do mapa. Essas três abordagens – diagrama de bifurcação, expoente de Lyapunov e análise da densidade – fornecem uma caracterização completa da dinâmica do mapa seno, onde se ilustra a aplicação de métodos matemáticos e computacionais em problemas biológicos.</p>
+<p><br>
+</p>
+</section>
+<section id="desenvolvimento" class="level1">
+<h1>Desenvolvimento</h1>
+<section id="diagrama-de-bifurcação" class="level2">
+<h2 class="anchored" data-anchor-id="diagrama-de-bifurcação">Diagrama de Bifurcação</h2>
+<p>Para construir o diagrama de bifurcação do mapa seno, implementou-se uma rotina que varre o parâmetro <span class="math inline">\(A\)</span> no intervalo <span class="math inline">\([0.6, 1.0]\)</span> com passo <span class="math inline">\(\Delta A = 0.001\)</span>. Para cada valor de <span class="math inline">\(A\)</span>, a equação de recorrência é iterada a partir de uma condição inicial aleatória <span class="math inline">\(x_0 \in [0,1]\)</span>. Descarta-se os primeiros 1000 iterados como transiente, e então os próximos 500 valores de <span class="math inline">\(x_t\)</span> são armazenados e plotados contra o respectivo <span class="math inline">\(A\)</span>. Utilizou-se transparência baixa (alpha = 0.13) nos pontos para evidenciar regiões de maior densidade. A Figura <a href="#fig-bifurcacao" class="quarto-xref">Fig.&nbsp;1</a> apresenta o diagrama obtido, onde é possível identificar as diferentes fases do sistema.</p>
+<div id="cell-fig-bifurcacao" class="cell" data-execution_count="2">
+<div id="fig-bifurcacao" class="cell-output cell-output-display cell-output-markdown quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bifurcacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="bifurcacao.pdf" id="fig-bifurcacao" class="img-fluid" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bifurcacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Diagrama de bifurcação do mapa seno para <span class="math inline">\(A \in [0.6, 1.0]\)</span>. <a href="#code-bifurcacao">Código</a>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>A análise visual do diagrama de bifurcação permitiu identificar claramente as diferentes regiões do Diagrama. Para <span class="math inline">\(A\)</span> entre aproximadamente em <span class="math inline">\(0.72\)</span>, o sistema converge para um ponto fixo estável (ramo único). Após este ponto, temos a primeira bifurcação, dando origem a um ciclo de período 2, que persiste até <span class="math inline">\(A \approx 0.84\)</span>. Após <span class="math inline">\(A \approx\)</span> temos um ciclo de 8. Sucessivas duplicações de período levam a ciclos de período 4 e 8 em intervalos cada vez mais estreitos, culminando em uma região caótica a partir de <span class="math inline">\(A \approx 0.87\)</span>. Dentro do caos, observam-se janelas de periodicidade, podemos ver próximos à <span class="math inline">\(A \approx 0.88\)</span>, <span class="math inline">\(A \approx 0.92\)</span> e <span class="math inline">\(A \approx 0.94\)</span>. Com incerteza visual de <span class="math inline">\(\pm 0.02\)</span> (relativo às divisões do gráfico).</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="estimativa-numérica-do-expoente-de-lyapunov" class="level2">
+<h2 class="anchored" data-anchor-id="estimativa-numérica-do-expoente-de-lyapunov">Estimativa Numérica do Expoente de Lyapunov</h2>
+<p>O expoente de Lyapunov quantifica a sensibilidade às condições iniciais. Para o mapa seno, a derivada da função é <span class="math inline">\(f'(x) = A\pi\cdot\cos(\pi x)\)</span>. O expoente é estimado por <span class="math inline">\(\lambda \approx \frac{1}{N} \sum_{i=1}^{N} \ln |f'(x_i)|\)</span>, onde os <span class="math inline">\(x_i\)</span> pertencem a uma órbita após o transiente. Implementou-se o cálculo para cada <span class="math inline">\(A\)</span> com <span class="math inline">\(N = 5000\)</span> e descarte de 1000 iterações iniciais. A Figura <a href="#fig-lyapunov" class="quarto-xref">Fig.&nbsp;2</a> mostra <span class="math inline">\(\lambda\)</span> em função de <span class="math inline">\(A\)</span>, alinhada verticalmente com o diagrama de bifurcação.</p>
+<div id="cell-fig-lyapunov" class="cell" data-execution_count="3">
+<div id="fig-lyapunov" class="cell-output cell-output-display cell-output-markdown quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lyapunov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="lyapunov.pdf" id="fig-lyapunov" class="img-fluid" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lyapunov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Onde, (a) Expoente de Lyapunov <span class="math inline">\(\lambda\)</span> em função de <span class="math inline">\(A\)</span> e (b) diagrama de bifurcação correspondente. <a href="#code-lyapunov">Código</a>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Os resultados confirmam as relações esperadas: <span class="math inline">\(\lambda &lt; 0\)</span> nas regiões periódicas (ponto fixo e ciclos), <span class="math inline">\(\lambda \approx 0\)</span> nos pontos de bifurcação (onde ocorre a duplicação de período) e <span class="math inline">\(\lambda &gt; 0\)</span> nas regiões caóticas. Por exemplo, para <span class="math inline">\(A = 0.7\)</span> e <span class="math inline">\(A = 0.8\)</span> (ponto fixo) <span class="math inline">\(\lambda &lt; 0\)</span>; em <span class="math inline">\(A \approx 0.72\)</span> e <span class="math inline">\(A \approx 0.84\)</span> (primeira e segunda bifurcação) <span class="math inline">\(\lambda\)</span> cruza zero; e para <span class="math inline">\(A = 0.9\)</span> (caos) <span class="math inline">\(\lambda &gt; 0\)</span>. As janelas periódicas dentro do caos aparecem icomo vales negativos pronunciados, como em <span class="math inline">\(A \approx 0.94\)</span>, onde <span class="math inline">\(\lambda\)</span> torna-se negativo.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="distribuição-da-variável-x_t-no-caos" class="level2">
+<h2 class="anchored" data-anchor-id="distribuição-da-variável-x_t-no-caos">Distribuição da Variável (<span class="math inline">\(X_{t}\)</span>) no Caos</h2>
+<p>Escolheu-se <span class="math inline">\(A = 0.98\)</span>, valor situado em uma região caótica conforme o expoente de Lyapunov positivo (<span class="math inline">\(\lambda \approx 0.2\)</span>). Gerou-se uma série temporal de <span class="math inline">\(10^6\)</span> iterações após descarte de 1000 transientes. A Figura <a href="#fig-histograma" class="quarto-xref">Fig.&nbsp;3</a> mostra o histograma normalizado desses valores com 200 bins, aproximando a densidade de probabilidade invariante do mapa.</p>
+<div id="cell-fig-histograma" class="cell" data-execution_count="4">
+<div id="fig-histograma" class="cell-output cell-output-display cell-output-markdown quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histograma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="histograma.pdf" id="fig-histograma" class="img-fluid" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histograma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Distribuição da variável <span class="math inline">\(x_t\)</span> para <span class="math inline">\(A = 0.98\)</span> (regime caótico). <a href="#code-histograma">Código</a>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>O histograma não é uniforme; apresenta picos pronunciados em certas regiões do intervalo <span class="math inline">\([0,1]\)</span>, e vales onde a densidade é muito baixa, por exemplo, o primeiro e o último picos mais expressivos e isolados demonstram alta densidade. Isso indica que, mesmo no caos, a órbita não visita todos os pontos com igual probabilidade, mas se concentra em subconjuntos atratores que refletem a forma não linear do mapa. A distribuição não mostra “buracos” expressivos como viu-se nos picos, mas é possível notar concavidades expressas como vale, está associada à presença de pontos instáveis ou à repulsão por ciclos periódicos instáveis.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="conclusão" class="level1 unnumbered">
+<h1 class="unnumbered">Conclusão</h1>
+<p>A análise do mapa seno <span class="math inline">\(x_{t+1} = A \sin(\pi x_t)\)</span> realizada neste trabalho permitiu caracterizar quantitativamente sua rica dinâmica para o parâmetro <span class="math inline">\(A \in [0,6, 1,0]\)</span>.</p>
+<p>O diagrama de bifurcação revelou a clássica rota para o caos via duplicação de período, com pontos fixos estáveis para <span class="math inline">\(A\)</span> abaixo de aproximadamente <span class="math inline">\(0,72\)</span>, ciclos de período <span class="math inline">\(2\)</span> até <span class="math inline">\(0,84\)</span>, e subsequentes duplicações até o estabelecimento do comportamento caótico a partir de <span class="math inline">\(A \approx 0,87\)</span>, intercalado por janelas de periodicidade como as observadas próximas a <span class="math inline">\(A \approx 0,88\)</span>, <span class="math inline">\(0,92\)</span> e <span class="math inline">\(0,94\)</span>. O expoente de Lyapunov confirmou essas transições, sendo negativo nas regiões periódicas, próximo de zero nos pontos de bifurcação e positivo no regime caótico, com vales negativos nas janelas periódicas, validando a interpretação do expoente como medida de sensibilidade às condições iniciais.</p>
+<p>Por fim, a distribuição da variável <span class="math inline">\(x_t\)</span> para <span class="math inline">\(A = 0,98\)</span> mostrou que, mesmo no caos a órbita não é uniforme: o histograma exibe picos pronunciados e vales, indicando que a medida invariante se concentra em subconjuntos atratores, refletindo a não linearidade do mapa e a ausência de ergodicidade uniforme.</p>
+<p>Esses resultados, em consonância com a teoria de sistemas dinâmicos apresentada por Allman e Rhodes (2004), demonstram como ferramentas computacionais simples podem desvendar estruturas complexas em modelos matemáticos de relevância biológica, como em estudos de populações com dinâmica não linear e sensibilidade a parâmetros.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="referências" class="level1 unnumbered">
+<h1 class="unnumbered">Referências</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
+<div id="ref-allman2004" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">ALLMAN, E. S.; RHODES, J. A. <strong>Mathematical models in biology: An introduction</strong>. Cambridge: Cambridge University Press, 2004. </div>
+</div>
+<div id="ref-usp_modelagem_2026" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">IFSC - INSTITUTO DE FÍSICA DE SÃO CARLOS. <strong>7600132 - Introdução à Modelagem Matemática em Biologia: O mapa seno (parte 2)</strong>. São Carlos.Universidade de São Paulo, 2026. Disponível em: &lt;<a href="https://edisciplinas.usp.br/course/view.php?id=137935">https://edisciplinas.usp.br/course/view.php?id=137935</a>&gt;. Acesso em: 6 abr. 2026</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section class="level1 unnumbered">
+<h1 class="unnumbered">Apêndice: Códigos Fontes</h1>
+<div>
+<span id="code-Cálculo Geral"></span>
+<section class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="">Código 1: funções e variáveis globais</h2>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-custom-title="Código 1: funções e variáveis globais" data-custom-label="Cálculo Geral"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CairoMakie</span>, <span class="bu">Logging</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ajusta tamanhos globais de imagens</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set_theme!</span>(<span class="fu">Theme</span>(fontsize <span class="op">=</span> <span class="fl">20</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                 titlesize <span class="op">=</span> <span class="fl">20</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                 xlabelsize <span class="op">=</span> <span class="fl">18</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                 ylabelsize <span class="op">=</span> <span class="fl">18</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                 ticklabelsize <span class="op">=</span> <span class="fl">16</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># define o mapa seno e sua derivada</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(A, x) <span class="op">=</span> A <span class="op">*</span> <span class="fu">sin</span>(<span class="cn">π</span> <span class="op">*</span> x)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span>(A, x) <span class="op">=</span> A <span class="op">*</span> <span class="cn">π</span> <span class="op">*</span> <span class="fu">cos</span>(<span class="cn">π</span> <span class="op">*</span> x)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.13</span> <span class="co"># opacidade do diagrama</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pointsize <span class="op">=</span> <span class="fl">1.5</span> <span class="co"># tamanho dos pontos</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cn">nothing</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+</div>
+<p> </p>
+<div>
+<span id="code-bifurcacao"></span>
+<section class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="">Código 2: Diagrama de bifurcação</h2>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-custom-title="Código 2: Diagrama de bifurcação" data-custom-caption="Geração do diagrama de bifurcação com descarte de transiente." data-custom-label="bifurcacao" data-custom-figlabel="bifurcacao"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="op">=</span> <span class="st">"bifurcacao.pdf"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>A_vals <span class="op">=</span> <span class="fl">0.6</span><span class="op">:</span><span class="fl">0.001</span><span class="op">:</span><span class="fl">1.0</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>transiente <span class="op">=</span> <span class="fl">1000</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>amostra <span class="op">=</span> <span class="fl">500</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>x_points <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A_points <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> A <span class="kw">in</span> A_vals</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x0</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>transiente</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>amostra</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(x_points, x)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(A_points, A)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Posições dos ticks (linhas de grade) a cada 0.02</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ticks_pos <span class="op">=</span> <span class="fl">0.6</span><span class="op">:</span><span class="fl">0.02</span><span class="op">:</span><span class="fl">1.0</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Rótulos: apenas para valores múltiplos de 0.1, caso contrário string vazia</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ticks_labels <span class="op">=</span> [if <span class="fu">round</span>(x, digits<span class="op">=</span><span class="fl">1</span>) <span class="op">==</span> x <span class="fu">string</span>(<span class="fu">round</span>(x, digits<span class="op">=</span><span class="fl">2</span>)) else <span class="st">""</span> <span class="kw">end</span> for x <span class="kw">in</span> ticks_pos]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">with_logger</span>(<span class="bu">Logging</span>.<span class="fu">SimpleLogger</span>(<span class="cn">stderr</span>, <span class="bu">Logging</span>.Error)) <span class="cf">do</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> fig <span class="op">=</span> <span class="fu">Figure</span>(resolution<span class="op">=</span>(<span class="fl">1000</span>,<span class="fl">600</span>))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], xlabel <span class="op">=</span> L<span class="st">"A"</span>, ylabel <span class="op">=</span> L<span class="st">"x_t"</span>, xticks <span class="op">=</span> (ticks_pos, ticks_labels), </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>              title <span class="op">=</span> <span class="st">"Diagrama de bifurcação do mapa seno"</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scatter!</span>(ax, A_points, x_points, markersize<span class="op">=</span>pointsize, color<span class="op">=:</span>black, alpha<span class="op">=</span>alpha)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">save</span>(pdf_path, fig)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> <span class="st">"![]("</span> <span class="op">*</span> pdf_path <span class="op">*</span> <span class="st">"){#fig-bifurcacao width=100%}"</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(<span class="fu">MIME</span>(<span class="st">"text/markdown"</span>), md)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p>Geração do diagrama de bifurcação com descarte de transiente.</p>
+<p><a href="#fig-bifurcacao">↩︎ Voltar para a figura</a></p>
+</section>
+</div>
+<p> </p>
+<div>
+<span id="code-lyapunov"></span>
+<section class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="">Código 3: Expoente de Lyapunov</h2>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-custom-title="Código 3: Expoente de Lyapunov" data-custom-caption="Cálculo do expoente de Lyapunov e visualização combinada." data-custom-label="lyapunov" data-custom-figlabel="lyapunov"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="op">=</span> <span class="st">"lyapunov.pdf"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>A_vals <span class="op">=</span> <span class="fl">0.6</span><span class="op">:</span><span class="fl">0.002</span><span class="op">:</span><span class="fl">1.0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>transiente <span class="op">=</span> <span class="fl">1000</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="fl">5000</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>lambda_vals <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> A <span class="kw">in</span> A_vals</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x0</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>transiente</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    sum_ln <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        sum_ln <span class="op">+=</span> <span class="fu">log</span>(<span class="fu">abs</span>(<span class="fu">df</span>(A, x)))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">push!</span>(lambda_vals, sum_ln <span class="op">/</span> N)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>A_bif <span class="op">=</span> <span class="fl">0.6</span><span class="op">:</span><span class="fl">0.001</span><span class="op">:</span><span class="fl">1.0</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>x_points_bif <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>A_points_bif <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> A <span class="kw">in</span> A_bif</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x0</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>transiente</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">200</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="fu">f</span>(A, x)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(x_points_bif, x)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(A_points_bif, A)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="fu">with_logger</span>(<span class="bu">Logging</span>.<span class="fu">SimpleLogger</span>(<span class="cn">stderr</span>, <span class="bu">Logging</span>.Error)) <span class="cf">do</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> fig <span class="op">=</span> <span class="fu">Figure</span>(resolution<span class="op">=</span>(<span class="fl">1000</span>,<span class="fl">800</span>))</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    ax1 <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], xlabel <span class="op">=</span> L<span class="st">"A"</span>, ylabel <span class="op">=</span> L<span class="st">"\lambda"</span>, </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>               title <span class="op">=</span> <span class="st">"(a) Expoente de Lyapunov"</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines!</span>(ax1, A_vals, lambda_vals, color<span class="op">=:</span>red, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hlines!</span>(ax1, <span class="fl">0</span>, color<span class="op">=:</span>black, linestyle<span class="op">=:</span>dash)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">2</span>,<span class="fl">1</span>], xlabel <span class="op">=</span> L<span class="st">"A"</span>, ylabel <span class="op">=</span> L<span class="st">"x_t"</span>, </span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>               title <span class="op">=</span> <span class="st">"(b) Diagrama de bifurcação"</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scatter!</span>(ax2, A_points_bif, x_points_bif, markersize<span class="op">=</span>pointsize, color<span class="op">=:</span>black, alpha<span class="op">=</span>alpha)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">save</span>(pdf_path, fig)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> <span class="st">"![]("</span> <span class="op">*</span> pdf_path <span class="op">*</span> <span class="st">"){#fig-lyapunov width=100%}"</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(<span class="fu">MIME</span>(<span class="st">"text/markdown"</span>), md)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p>Cálculo do expoente de Lyapunov e visualização combinada.</p>
+<p><a href="#fig-lyapunov">↩︎ Voltar para a figura</a></p>
+</section>
+</div>
+<p> </p>
+<div>
+<span id="code-histograma"></span>
+<section class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="">Código 4: Distribuição no caos</h2>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-custom-title="Código 4: Distribuição no caos" data-custom-caption="Histograma de dez à sexta potência iterados após transiente." data-custom-label="histograma" data-custom-figlabel="histograma"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="op">=</span> <span class="st">"histograma.pdf"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>A_caos <span class="op">=</span> <span class="fl">0.98</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>transiente <span class="op">=</span> <span class="fl">1000</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>N_hist <span class="op">=</span> <span class="fl">10</span><span class="op">^</span><span class="fl">6</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fu">rand</span>()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>transiente</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="fu">f</span>(A_caos, x)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>dados <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>N_hist</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="fu">f</span>(A_caos, x)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">push!</span>(dados, x)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">with_logger</span>(<span class="bu">Logging</span>.<span class="fu">SimpleLogger</span>(<span class="cn">stderr</span>, <span class="bu">Logging</span>.Error)) <span class="cf">do</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> fig <span class="op">=</span> <span class="fu">Figure</span>(resolution<span class="op">=</span>(<span class="fl">800</span>,<span class="fl">500</span>))</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> <span class="fu">Axis</span>(fig[<span class="fl">1</span>,<span class="fl">1</span>], xlabel <span class="op">=</span> L<span class="st">"x_t"</span>, ylabel <span class="op">=</span> <span class="st">"Densidade"</span>, </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>              title <span class="op">=</span> <span class="st">"Histograma para A = </span><span class="sc">$</span>A_caos<span class="st">"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hist!</span>(ax, dados, bins<span class="op">=</span><span class="fl">200</span>, normalization<span class="op">=:</span>density, color<span class="op">=:</span>steelblue)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">save</span>(pdf_path, fig)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> <span class="st">"![]("</span> <span class="op">*</span> pdf_path <span class="op">*</span> <span class="st">"){#fig-histograma width=80%}"</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(<span class="fu">MIME</span>(<span class="st">"text/markdown"</span>), md)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p>Histograma de dez à sexta potência iterados após transiente.</p>
+<p><a href="#fig-histograma">↩︎ Voltar para a figura</a></p>
+</section>
+</div>
+<p> </p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

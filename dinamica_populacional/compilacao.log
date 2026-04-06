@@ -1,0 +1,140 @@
+=== Log Quarto Renderização ===
+Arquivo: /home/Couto/Documents/Modelagem_bio/dinamica_populacional/Projeto 1 — NUSP15464382.qmd
+----------------------------------------
+Starting julia-1.12 kernel...
+Done
+Executing 'Projeto 1 — NUSP15464382.quarto_ipynb'
+  Cell 1/4: 'fig-malthusiano'...
+Done
+  Cell 2/4: 'fig-vitalidade'....
+Done
+  Cell 3/4: 'fig-equilibrio'....
+Done
+  Cell 4/4: 'fig-logistico'.....
+Done
+[1mpandoc [22m
+  to: latex
+  output-file: Projeto-1-—-NUSP15464382.tex
+  standalone: true
+  pdf-engine: pdflatex
+  variables:
+    graphics: true
+    tables: true
+  default-image-extension: pdf
+  toc: false
+  number-sections: true
+  pdf-engine-opts:
+    - '-shell-escape'
+  
+[1mmetadata[22m
+  documentclass: scrartcl
+  classoption:
+    - DIV=11
+    - numbers=noendperiod
+    - 12pt
+    - a4paper
+  papersize: a4
+  header-includes:
+    - \KOMAoption{captions}{tableheading}
+  block-headings: true
+  chave: 6f57be1f
+  extensoes: cl-roberts (modificada)
+  gerais: abnt-num.csl, bib.bib, ifsc.jpg
+  lang: pt
+  bibliography:
+    - bib.bib
+  csl: abnt-num.csl
+  link-citations: true
+  nocite: |
+    @*
+  crossref:
+    fig-title: Figura
+    tbl-title: Tabela
+    fig-prefix: Fig.
+    eq-prefix: Eq.
+  code-appendix-title: 'Apêndice: Códigos Fontes em Linguagem Julia'
+  code-appendix-header-level: 1
+  comp_nativa: true
+  modo_escrita: false
+  usar_gerais: true
+  usar_exts: true
+  usar_prog: true
+  ignorar_erros: true
+  geometry:
+    - a4paper
+    - top=3cm
+    - left=3cm
+    - right=2cm
+    - bottom=2cm
+  
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning pdflatex - 1[39m[22m
+  This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+   \write18 enabled.
+  entering extended mode
+  Message: XIM input method is not supported
+  Unsetting the GTK_IM_MODULE environment variable
+  Message: XIM input method is not supported
+  Unsetting the GTK_IM_MODULE environment variable
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r1_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r2_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r3_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r4_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r5_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207950): WARNING **: 23:12:57.011: Duplicate option text ('Eixo X') for parameter 'r6_ax' in extension 'org.inkscape.render.poly_3d'.
+  Message: XIM input method is not supported
+  Unsetting the GTK_IM_MODULE environment variable
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.277: Duplicate option text ('Eixo X') for parameter 'r1_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.277: Duplicate option text ('Eixo X') for parameter 'r2_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.277: Duplicate option text ('Eixo X') for parameter 'r3_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.277: Duplicate option text ('Eixo X') for parameter 'r4_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.277: Duplicate option text ('Eixo X') for parameter 'r5_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207965): WARNING **: 23:12:57.278: Duplicate option text ('Eixo X') for parameter 'r6_ax' in extension 'org.inkscape.render.poly_3d'.
+  Message: XIM input method is not supported
+  Unsetting the GTK_IM_MODULE environment variable
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.517: Duplicate option text ('Eixo X') for parameter 'r1_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.517: Duplicate option text ('Eixo X') for parameter 'r2_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.517: Duplicate option text ('Eixo X') for parameter 'r3_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.518: Duplicate option text ('Eixo X') for parameter 'r4_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.518: Duplicate option text ('Eixo X') for parameter 'r5_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207979): WARNING **: 23:12:57.518: Duplicate option text ('Eixo X') for parameter 'r6_ax' in extension 'org.inkscape.render.poly_3d'.
+  Message: XIM input method is not supported
+  Unsetting the GTK_IM_MODULE environment variable
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r1_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r2_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r3_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r4_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r5_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+  ** (org.inkscape.Inkscape:207993): WARNING **: 23:12:57.762: Duplicate option text ('Eixo X') for parameter 'r6_ax' in extension 'org.inkscape.render.poly_3d'.
+  
+[1m[34mrunning pdflatex - 2[39m[22m
+  This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+   \write18 enabled.
+  entering extended mode
+  
+Output created: Projeto-1-—-NUSP15464382.pdf

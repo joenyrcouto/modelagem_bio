@@ -1,0 +1,346 @@
+---
+extensoes: cl-roberts (modificada)
+gerais: ifsc.jpg, bib.bib, abnt-num.csl
+lang: pt
+bibliography: bib.bib
+csl: abnt-num.csl
+link-citations: true
+filters:
+  - code-appendix
+crossref:
+  fig-title: Figura
+  tbl-title: Tabela
+  fig-prefix: Fig.
+  eq-prefix: Eq.
+code-appendix-title: 'Apêndice: Códigos Fontes'
+nocite: |
+  @*
+code-appendix-header-level: 1
+format:
+  html:
+    toc: false
+    code-fold: true
+    format-links: false
+    code-overflow: wrap
+  pdf:
+    toc: false
+    code-overflow: wrap
+    number-sections: true
+    keep-tex: false
+    echo: true
+    pdf-engine-opts: 
+      - "-shell-escape"
+    papersize: a4
+    fig-dpi: 300
+    classoption: [12pt, a4paper]
+    geometry:
+      - a4paper
+      - top=3cm
+      - left=3cm
+      - right=2cm
+      - bottom=2cm
+    fig-format: pdf
+    pdf-engine: lualatex
+    include-in-header:
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines=true, breakanywhere=true, commandchars=\\\{\}}
+        \usepackage{newunicodechar}
+        \newunicodechar{↩}{\ensuremath{\hookleftarrow}}
+        \newunicodechar{︎}{}
+        \usepackage[utf8]{inputenc}
+        \usepackage{indentfirst}
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{} 
+        \fancyhead[R]{\thepage}
+        \renewcommand{\headrulewidth}{0pt}
+        \fancypagestyle{plain}{
+          \fancyhf{}
+          \fancyhead[R]{\thepage}
+          \renewcommand{\headrulewidth}{0pt}
+        }
+        \renewcommand{\sectionmark}[1]{}
+        \renewcommand{\subsectionmark}[1]{}
+        \AtBeginDocument{\renewcommand{\maketitle}{}}
+        \setlength{\parindent}{1.2em}
+        \setlength{\parskip}{0pt}
+engine: jupyter
+comp_nativa: false
+modo_escrita: false
+usar_gerais: true
+usar_exts: true
+usar_prog: true
+---
+
+\begin{titlepage}
+    \begin{center}
+    % Bloco Superior: Logo e Instituição::
+        \includegraphics[height=2.6cm]{ifsc.jpg}\hspace{0.3cm} \\
+        \large \textbf{INSTITUTO DE FÍSICA DE SÃO CARLOS} \\
+        \large \textbf{UNIVERSIDADE DE SÃO PAULO} \\
+        
+        \vfill 
+        
+        % Bloco Central: Título
+        \large \textbf{INTRODUÇÃO À MODELAGEM MATEMÁTICA EM BIOLOGIA} \\
+        \vspace{0.5cm}
+        {\Large O mapa seno — projeto 2} \\
+        
+        \vfill 
+    \end{center}
+
+    % Bloco de Identificação
+    \begin{flushright}
+        \large
+        Nome: Joenyr P. C. Domingues \\
+        NUSP: 15464382 \\
+    \end{flushright}
+
+    \vspace{4cm}
+
+    \begin{center}
+        \large São Carlos \\
+        \large 06/04/2026
+    \end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents 
+\newpage
+
+# Introdução {.unnumbered}
+ 
+A modelagem matemática em biologia frequentemente emprega equações de diferenças para descrever a evolução temporal de populações ou de sistemas dinâmicos, como discutido por Allman e Rhodes (2004) no Capítulo 1 de seu livro *Mathematical Models in Biology: An Introduction*. Enquanto o modelo Malthusiano linear $P_{t+1} = \lambda P_t$ produz crescimento ou decaimento exponencial, modelos não lineares, como o mapa logístico, revelam comportamentos mais ricos, incluindo bifurcações e caos. Neste projeto, explora-se o mapa seno, definido pela equação de recorrência
+
+\begin{equation}
+\label{eq:sinemap}
+x_{t+1} = A \sin(\pi x_t),
+\end{equation}
+
+\noindent onde $x_t \in [0,1]$ e o parâmetro de controle $A \in (0,1]$. Este mapa, embora simples, exibe uma dinâmica complexa análoga à do mapa logístico, sendo utilizado para ilustrar conceitos fundamentais da teoria de sistemas dinâmicos. \
+
+Para analisar o mapa seno, emprega-se três ferramentas computacionais que seguem a metodologia. A primeira é o diagrama de bifurcação, que consiste em variar o parâmetro $A$ e, para cada valor, descartar um número suficiente de iterações iniciais (transiente) e então plotar os valores subsequentes de $x_t$ em função de $A$. Esse gráfico revela como o comportamento de longo prazo do sistema muda com $A$: regiões de ponto fixo, ciclos de período $2$, $4$, $8$, e regimes caóticos, além de janelas de periodicidade dentro do caos. A análise de bifurcações é essencial para compreender a transição da ordem ao caos em modelos não lineares discretos.
+
+A segunda ferramenta é o expoente de Lyapunov, que quantifica a sensibilidade do sistema às condições iniciais. Para o mapa seno, a derivada da função é $f'(x) = A\pi\cdot\cos(\pi x)$. O expoente é estimado numericamente por
+
+\begin{equation}
+\label{eq:lyapunov}
+\lambda \approx \frac{1}{N}\sum_{i=1}^{N} \ln |f'(x_i)|,
+\end{equation}
+
+\noindent onde os $x_i$ são pontos de uma órbita após o transiente. Valores de $\lambda$ negativos indica-se estabilidade periódica, $\lambda \approx 0$ ocorre nos pontos de bifurcação, e $\lambda > 0$ caracteriza caos. Allman e Rhodes (2004) destacam que o expoente de Lyapunov é uma medida direta da imprevisibilidade em sistemas caóticos, sendo calculado por meio da linearização da dinâmica.
+
+A terceira etapa consiste em investigar a distribuição da variável $x_t$ no regime caótico, escolhe-se um valor de $A$ com $\lambda > 0$ (por exemplo, $A = 0,98$). Gerando uma série temporal longa (como $10^6$ iterações) e construindo um histograma, obtem-se uma estimativa da densidade de probabilidade invariante do mapa. Essas três abordagens – diagrama de bifurcação, expoente de Lyapunov e análise da densidade – fornecem uma caracterização completa da dinâmica do mapa seno, onde se ilustra a aplicação de métodos matemáticos e computacionais em problemas biológicos.
+
+```{julia}
+#| output: false
+# @title: Código 1: funções e variáveis globais
+# @label: Cálculo Geral
+
+using CairoMakie, Logging
+
+# ajusta tamanhos globais de imagens
+set_theme!(Theme(fontsize = 20,
+                 titlesize = 20,
+                 xlabelsize = 18,
+                 ylabelsize = 18,
+                 ticklabelsize = 16))
+
+# define o mapa seno e sua derivada
+f(A, x) = A * sin(π * x)
+df(A, x) = A * π * cos(π * x)
+alpha = 0.13 # opacidade do diagrama
+pointsize = 1.5 # tamanho dos pontos
+
+nothing
+```
+\
+
+# Desenvolvimento
+
+## Diagrama de Bifurcação
+
+Para construir o diagrama de bifurcação do mapa seno, implementou-se uma rotina que varre o parâmetro $A$ no intervalo $[0.6, 1.0]$ com passo $\Delta A = 0.001$. Para cada valor de $A$, a equação de recorrência é iterada a partir de uma condição inicial aleatória $x_0 \in [0,1]$. Descarta-se os primeiros 1000 iterados como transiente, e então os próximos 500 valores de $x_t$ são armazenados e plotados contra o respectivo $A$. Utilizou-se transparência baixa (alpha = `{julia} alpha`) nos pontos para evidenciar regiões de maior densidade. A Figura @fig-bifurcacao apresenta o diagrama obtido, onde é possível identificar as diferentes fases do sistema.
+
+```{julia}
+#| label: fig-bifurcacao
+#| fig-cap: 'Diagrama de bifurcação do mapa seno para $A \in [0.6, 1.0]$. [Código](#code-bifurcacao)'
+# @title: Código 2: Diagrama de bifurcação
+# @label: bifurcacao
+# @figlabel: bifurcacao
+# @caption: Geração do diagrama de bifurcação com descarte de transiente.
+
+pdf_path = "bifurcacao.pdf"
+
+A_vals = 0.6:0.001:1.0
+transiente = 1000
+amostra = 500
+x0 = rand()
+
+x_points = Float64[]
+A_points = Float64[]
+
+for A in A_vals
+    x = x0
+    for _ in 1:transiente
+        x = f(A, x)
+    end
+    for _ in 1:amostra
+        x = f(A, x)
+        push!(x_points, x)
+        push!(A_points, A)
+    end
+end
+
+# Posições dos ticks (linhas de grade) a cada 0.02
+ticks_pos = 0.6:0.02:1.0
+# Rótulos: apenas para valores múltiplos de 0.1, caso contrário string vazia
+ticks_labels = [if round(x, digits=1) == x string(round(x, digits=2)) else "" end for x in ticks_pos]
+
+with_logger(Logging.SimpleLogger(stderr, Logging.Error)) do
+    global fig = Figure(resolution=(1000,600))
+    ax = Axis(fig[1,1], xlabel = L"A", ylabel = L"x_t", xticks = (ticks_pos, ticks_labels), 
+              title = "Diagrama de bifurcação do mapa seno")
+    scatter!(ax, A_points, x_points, markersize=pointsize, color=:black, alpha=alpha)
+    save(pdf_path, fig)
+end
+
+md = "![](" * pdf_path * "){#fig-bifurcacao width=100%}"
+display(MIME("text/markdown"), md)
+```
+
+A análise visual do diagrama de bifurcação permitiu identificar claramente as diferentes regiões do Diagrama. Para $A$ entre aproximadamente em $0.72$, o sistema converge para um ponto fixo estável (ramo único). Após este ponto, temos a primeira bifurcação, dando origem a um ciclo de período 2, que persiste até $A \approx 0.84$. Após $A \approx$ temos um ciclo de 8. Sucessivas duplicações de período levam a ciclos de período 4 e 8 em intervalos cada vez mais estreitos, culminando em uma região caótica a partir de $A \approx 0.87$. Dentro do caos, observam-se janelas de periodicidade, podemos ver próximos à $A \approx 0.88$, $A \approx 0.92$ e $A \approx 0.94$. Com incerteza visual de $\pm 0.02$ (relativo às divisões do gráfico).
+
+{{< pagebreak >}}
+
+## Estimativa Numérica do Expoente de Lyapunov
+
+O expoente de Lyapunov quantifica a sensibilidade às condições iniciais. Para o mapa seno, a derivada da função é $f'(x) = A\pi\cdot\cos(\pi x)$. O expoente é estimado por $\lambda \approx \frac{1}{N} \sum_{i=1}^{N} \ln |f'(x_i)|$, onde os $x_i$ pertencem a uma órbita após o transiente. Implementou-se o cálculo para cada $A$ com $N = 5000$ e descarte de 1000 iterações iniciais. A Figura @fig-lyapunov mostra $\lambda$ em função de $A$, alinhada verticalmente com o diagrama de bifurcação.
+
+```{julia}
+#| label: fig-lyapunov
+#| fig-cap: 'Onde, (a) Expoente de Lyapunov $\lambda$ em função de $A$ e (b) diagrama de bifurcação correspondente. [Código](#code-lyapunov)'
+# @title: Código 3: Expoente de Lyapunov
+# @label: lyapunov
+# @figlabel: lyapunov
+# @caption: Cálculo do expoente de Lyapunov e visualização combinada.
+
+pdf_path = "lyapunov.pdf"
+
+A_vals = 0.6:0.002:1.0
+transiente = 1000
+N = 5000
+x0 = rand()
+
+lambda_vals = Float64[]
+
+for A in A_vals
+    x = x0
+    for _ in 1:transiente
+        x = f(A, x)
+    end
+    sum_ln = 0.0
+    for _ in 1:N
+        x = f(A, x)
+        sum_ln += log(abs(df(A, x)))
+    end
+    push!(lambda_vals, sum_ln / N)
+end
+
+A_bif = 0.6:0.001:1.0
+x_points_bif = Float64[]
+A_points_bif = Float64[]
+for A in A_bif
+    x = x0
+    for _ in 1:transiente
+        x = f(A, x)
+    end
+    for _ in 1:200
+        x = f(A, x)
+        push!(x_points_bif, x)
+        push!(A_points_bif, A)
+    end
+end
+
+with_logger(Logging.SimpleLogger(stderr, Logging.Error)) do
+    global fig = Figure(resolution=(1000,800))
+    ax1 = Axis(fig[1,1], xlabel = L"A", ylabel = L"\lambda", 
+               title = "(a) Expoente de Lyapunov")
+    lines!(ax1, A_vals, lambda_vals, color=:red, linewidth=1.5)
+    hlines!(ax1, 0, color=:black, linestyle=:dash)
+    ax2 = Axis(fig[2,1], xlabel = L"A", ylabel = L"x_t", 
+               title = "(b) Diagrama de bifurcação")
+    scatter!(ax2, A_points_bif, x_points_bif, markersize=pointsize, color=:black, alpha=alpha)
+    save(pdf_path, fig)
+end
+
+md = "![](" * pdf_path * "){#fig-lyapunov width=100%}"
+display(MIME("text/markdown"), md)
+```
+
+Os resultados confirmam as relações esperadas: $\lambda < 0$ nas regiões periódicas (ponto fixo e ciclos), $\lambda \approx 0$ nos pontos de bifurcação (onde ocorre a duplicação de período) e $\lambda > 0$ nas regiões caóticas. Por exemplo, para $A = 0.7$ e $A = 0.8$ (ponto fixo) $\lambda < 0$; em $A \approx 0.72$ e $A \approx 0.84$ (primeira e segunda bifurcação) $\lambda$ cruza zero; e para $A = 0.9$ (caos) $\lambda > 0$. As janelas periódicas dentro do caos aparecem icomo vales negativos pronunciados, como em $A \approx 0.94$, onde $\lambda$ torna-se negativo.
+
+{{< pagebreak >}}
+
+## Distribuição da Variável ($X_{t}$) no Caos
+
+Escolheu-se $A = 0.98$, valor situado em uma região caótica conforme o expoente de Lyapunov positivo ($\lambda \approx 0.2$). Gerou-se uma série temporal de $10^6$ iterações após descarte de 1000 transientes. A Figura @fig-histograma mostra o histograma normalizado desses valores com 200 bins, aproximando a densidade de probabilidade invariante do mapa.
+
+```{julia}
+#| label: fig-histograma
+#| fig-cap: 'Distribuição da variável $x_t$ para $A = 0.98$ (regime caótico). [Código](#code-histograma)'
+# @title: Código 4: Distribuição no caos
+# @label: histograma
+# @figlabel: histograma
+# @caption: Histograma de dez à sexta potência iterados após transiente.
+
+pdf_path = "histograma.pdf"
+
+A_caos = 0.98
+transiente = 1000
+N_hist = 10^6
+x = rand()
+for _ in 1:transiente
+    x = f(A_caos, x)
+end
+dados = Float64[]
+for _ in 1:N_hist
+    x = f(A_caos, x)
+    push!(dados, x)
+end
+
+with_logger(Logging.SimpleLogger(stderr, Logging.Error)) do
+    global fig = Figure(resolution=(800,500))
+    ax = Axis(fig[1,1], xlabel = L"x_t", ylabel = "Densidade", 
+              title = "Histograma para A = $A_caos")
+    hist!(ax, dados, bins=200, normalization=:density, color=:steelblue)
+    save(pdf_path, fig)
+end
+
+md = "![](" * pdf_path * "){#fig-histograma width=80%}"
+display(MIME("text/markdown"), md)
+```
+
+O histograma não é uniforme; apresenta picos pronunciados em certas regiões do intervalo $[0,1]$, e vales onde a densidade é muito baixa, por exemplo, o primeiro e o último picos mais expressivos e isolados demonstram alta densidade. Isso indica que, mesmo no caos, a órbita não visita todos os pontos com igual probabilidade, mas se concentra em subconjuntos atratores que refletem a forma não linear do mapa. A distribuição não mostra “buracos” expressivos como viu-se nos picos, mas é possível notar concavidades expressas como vale, está associada à presença de pontos instáveis ou à repulsão por ciclos periódicos instáveis.
+
+{{< pagebreak >}}
+
+# Conclusão {.unnumbered}
+
+A análise do mapa seno $x_{t+1} = A \sin(\pi x_t)$ realizada neste trabalho permitiu caracterizar quantitativamente sua rica dinâmica para o parâmetro $A \in [0,6, 1,0]$.
+
+O diagrama de bifurcação revelou a clássica rota para o caos via duplicação de período, com pontos fixos estáveis para $A$ abaixo de aproximadamente $0,72$, ciclos de período $2$ até $0,84$, e subsequentes duplicações até o estabelecimento do comportamento caótico a partir de $A \approx 0,87$, intercalado por janelas de periodicidade como as observadas próximas a $A \approx 0,88$, $0,92$ e $0,94$. O expoente de Lyapunov confirmou essas transições, sendo negativo nas regiões periódicas, próximo de zero nos pontos de bifurcação e positivo no regime caótico, com vales negativos nas janelas periódicas, validando a interpretação do expoente como medida de sensibilidade às condições iniciais. 
+
+Por fim, a distribuição da variável $x_t$ para $A = 0,98$ mostrou que, mesmo no caos a órbita não é uniforme: o histograma exibe picos pronunciados e vales, indicando que a medida invariante se concentra em subconjuntos atratores, refletindo a não linearidade do mapa e a ausência de ergodicidade uniforme.
+
+Esses resultados, em consonância com a teoria de sistemas dinâmicos apresentada por Allman e Rhodes (2004), demonstram como ferramentas computacionais simples podem desvendar estruturas complexas em modelos matemáticos de relevância biológica, como em estudos de populações com dinâmica não linear e sensibilidade a parâmetros.
+
+{{< pagebreak >}}
+
+# Referências {.unnumbered}
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}

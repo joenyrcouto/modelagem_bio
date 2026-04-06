@@ -1,0 +1,72 @@
+=== Log Quarto Preview ===
+Iniciado em: 2026-04-02 23:05:44
+----------------------------------------
+Starting julia-1.12 kernel...
+Done
+Executing 'Projeto 1 — NUSP15464382.quarto_ipynb'
+  Cell 1/4: 'fig-malthusiano'...
+Done
+  Cell 2/4: 'fig-vitalidade'....
+Done
+  Cell 3/4: 'fig-equilibrio'....
+Done
+  Cell 4/4: 'fig-logistico'.....
+Done
+[1mpandoc [22m
+  to: html
+  output-file: Projeto 1 — NUSP15464382.html
+  standalone: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: false
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: pt
+  chave: 6f57be1f
+  extensoes: cl-roberts (modificada)
+  gerais: abnt-num.csl, bib.bib, ifsc.jpg
+  bibliography:
+    - bib.bib
+  csl: abnt-num.csl
+  nocite: |
+    @*
+  crossref:
+    fig-title: Figura
+    tbl-title: Tabela
+    fig-prefix: Fig.
+    eq-prefix: Eq.
+  code-appendix-title: 'Apêndice: Códigos Fontes em Linguagem Julia'
+  code-appendix-header-level: 1
+  comp_nativa: false
+  modo_escrita: false
+  usar_gerais: true
+  usar_exts: true
+  usar_prog: true
+  ignorar_erros: true
+  
+[31mFATAL (/opt/quarto/share/filters/main.lua:3757) An error occurred:
+Could not run /home/Couto/Documents/Modelagem_bio/dinamica_populacional/code-appendix as a JSON filter.
+Please make sure the file exists and is executable.
+Did you intend 'code-appendix' as a Lua filter in an extension?
+If so, make sure you've spelled the name of the extension correctly.
+The original Pandoc error follows below.
+Error running filter /home/Couto/Documents/Modelagem_bio/dinamica_populacional/code-appendix:
+Could not find executable /home/Couto/Documents/Modelagem_bio/dinamica_populacional/code-appendix
+[39m
+Error running filter /opt/quarto/share/filters/main.lua:
+/opt/quarto/share/filters/main.lua:586: FATAL QUARTO ERROR
+stack traceback:
+	/opt/quarto/share/filters/main.lua:2619: in function 'fatal'
+	/opt/quarto/share/filters/main.lua:2199: in function 'fail'
+	/opt/quarto/share/filters/main.lua:3757: in field 'Pandoc'
+	/opt/quarto/share/filters/main.lua:586: in function 'run_emulated_filter'
+	/opt/quarto/share/filters/main.lua:1314: in local 'callback'
+	/opt/quarto/share/filters/main.lua:1332: in upvalue 'run_emulated_filter_chain'
+	/opt/quarto/share/filters/main.lua:1368: in function </opt/quarto/share/filters/main.lua:1365>
+[33mWARN: Error encountered when rendering files[39m
